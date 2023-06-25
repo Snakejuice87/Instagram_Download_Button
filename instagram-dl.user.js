@@ -36,8 +36,8 @@
     // =    Options    =
     // =================
     // Old method is faster than new method, but not work or unable get highest resolution media sometime 
-    const disableNewUrlFetchMethod = false;
-    const prefetchAndAttachLink = false; // prefetch and add link into the button elements
+    const disableNewUrlFetchMethod = true;
+    const prefetchAndAttachLink = true; // prefetch and add link into the button elements
     const hoverToFetchAndAttachLink = true;  // fetch and add link when hover the button
     const replaceJpegWithJpg = false;
     // === File name placeholders ===
@@ -46,7 +46,7 @@
     // %medianame% : the original media file name
     // %postId% : the post id
     // %mediaIndex% : the media index in multiple-media posts
-    const postFilenameTemplate = '%id%-%datetime%-%medianame%';
+    const postFilenameTemplate = '%medianame%-%id%-%datetime%';
     const storyFilenameTemplate = postFilenameTemplate;
     // === Datetime placeholders ===
     // %y%: year (4 digits)
@@ -55,7 +55,7 @@
     // %H%: hour (00-23)
     // %M%: min (00-59)
     // %S%: sec (00-59)
-    const datetimeTemplate = '%y%%m%%d%_%H%%M%%S%';
+    const datetimeTemplate = '%d%-%m%-%y%_%H%.%M%.%S%';
     // ==================
 
     const postIdPattern = /^\/p\/([^/]+)\/$/;
